@@ -8,6 +8,7 @@
 }
 
 .container { /*Contenedor: ocupe cada fila del navegador(para cada imagen de work)*/
+    outline: 1px solid yellow;
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
@@ -142,15 +143,109 @@ nav a {
 #about {
     outline: 1px solid red;
     text-align: center;
-    margin-top: 108px;
     background-color: #18bc9c;
-    font-weight: bold;
     color: white;
     height: 685px;
 }
 
+#about h2 {
+    outline: 1px solid yellow;
+    font-size: 3em;
+    padding-top: 100px;
+    margin-bottom: 15px;
+    font-family: "Montserrat"; 
+    font-weight: bold; 
+}
 
+#about hr {
+    outline: 1px solid green;
+  
+}
 
+div .star::after { /*despues del titulo mostrar una rayita*/
+    outline: 1px solid orange;
+   /* content: "";
+    width: 30%;
+    height: 5px;
+    background-color: black;
+    display: block; /*Para que se muestre*/ /*con % se adaptan a cualquier dispositivo*/
+}
+
+#about .row { /*Colocamos en 2 columnas*/
+    outline: 1px solid red;
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    column-count:2;
+    display: block;
+}
+#about .col-lg-4 {
+    outline: 1px solid yellowgreen;
+    font-size: 20px;
+    font-family: "Lato";
+    text-align: left;
+}
+
+p {
+    outline: 1px solid blue;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+#about .btn {
+    outline: 1px solid teal;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+#about a {
+    text-decoration: none; /*Quitamos el color azul del enlace*/
+    cursor: pointer;
+}
+
+.btn-outline {
+        font-size: 20px;
+        margin-top: 15px;
+        transition: all .3s ease-in-out;
+        color: #fff;
+        border: solid 2px #fff;
+        background: 0 0;
+}
+
+/*STYLE FOR THE SECTION CONTACT*/
+
+#contact {
+    outline: 1px solid red;
+    text-align: center;
+    background-color: white;
+    color: #2c3e50;
+    height: 685px;
+}
+
+/*STYLE FOR THE FOOTER */
+
+footer {
+    outline: 1px solid yellow;
+    text-align: center;
+    background-color: #2c3e50;
+    height: 400px;
+    color: white;
+    display: block;
+}
+
+h3 {
+    outline: 1px solid orange;
+    font-family: "Montserrat";
+    font-size: 28px;  
+}
 
 
 
