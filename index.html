@@ -10,22 +10,24 @@
 </head>
 <body>
     <header>
-        <span>START BOOTSTRAP</span>
-        <nav class="text-uppercase"><!--3°Agregamos la clase uppercase del css ya asignado-->
-            <!--Menu horizontal navegador-->
-            <a href="#portfolio">Portfolio</a> <!--Permite navegar dentro de mi pagina-->
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container">
+            <span>START BOOTSTRAP</span>
+            <nav class="text-uppercase"><!--3°Agregamos la clase uppercase del css ya asignado-->
+                <!--Menu horizontal navegador-->
+                <a href="#portfolio">Portfolio</a> <!--Permite navegar dentro de mi pagina-->
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <section id="intro">
-        <div class="container">
+        <di class="container">
             <figure>
                 <img src="assets/images/profile.png">
             </figure>
             <h1>START BOOTSTRAP</h1>
-            <hr class="fa fa-star fa-2x" aria-hidden="true"> <!--Insertamos icono start-->       
+            <hr class="fa fa-star fa-2x"> <!--Insertamos icono start-->       
             <p>Web Developer - Graphic Artist - User Experience Designer</p>
         </div>
     </section>
@@ -72,13 +74,14 @@
                 <div class="col-lg-4">
                     <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
                 </div>
+            </div>
                 <div class="col-lg-8">
                     <a href="#" class="btn btn-lg btn-outline">
                     <i class="fa fa-download"></i> <!--Agregamos icono download-->
                     Download Theme
                     </a>
                 </div>
-            </div>
+            
         </div> 
     </section>
     
@@ -90,28 +93,28 @@
                 <div class="col-lg-8 mx-auto">
                     <form name="sentMessage" id="" novalidate> <!--Creamos formulario-->
                         <div class="control-group">
-                            <div class="">
+                            <div class="form-group">
                                 <label>Name</label>
                                 <input class="form-control" id="name" type="text" placeholder="Name"> <!--Validamos (required data-validation-required-message="Please enter your name.")-->
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="control-group">
-                            <div class="">
+                            <div class="form-group">
                                 <label>Email Address</label>
                                 <input class="form-control" id="email" type="email" placeholder="Email Address">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="control-group">
-                            <div class="form-group floating-label-form-group controls">
+                            <div class="form-group">
                                 <label>Phone Number</label>
                                 <input class="form-control" id="phone" type="tel" placeholder="Phone Number">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="control-group">
-                            <div class="">
+                            <div class="form-group">
                                 <label>Message</label>
                                 <textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
                                 <p class="help-block text-danger"></p>
@@ -127,8 +130,8 @@
             </div>
         </div>    
     </section>
-    <footer>
-        <div class="container">
+    <footer id="footer">
+        <div class="contact">
         <div class="location">
             <h3>LOCATION</h3>
             <P>"3481 Melrose Place
@@ -140,11 +143,11 @@
         <div class="around">
             <h3>AROUND THE WEB</h3>
             <ul>
-                <li class="fa fa-facebook"><a href="">fb</a></li>
-                <li class="fa fa-google-plus"><a href="">google</a></li>
-                <li class="fa fa-twitter"><a href="">twi</a></li>
-                <li class="fa fa-linkedin"><a href="">o</a></li>
-                <li class="fa fa-dribbble"><a href="">o</a></li>
+                <li class="fa fa-facebook"><a href=""></a></li>
+                <li class="fa fa-google-plus"><a href=""></a></li>
+                <li class="fa fa-twitter"><a href=""></a></li>
+                <li class="fa fa-linkedin"><a href=""></a></li>
+                <li class="fa fa-dribbble"><a href=""></a></li>
             </ul>
         </div>
         <div class="freelancer">
@@ -156,7 +159,7 @@
                 "Bootstrap theme created by <strong>Start Bootstrap</strong>."
             </P>
         </div>
-        <div class="footer">
+        <div class="firma">
             <p>Copyright &#169; Pamela DLozano 2017</p>
         </div>
         </div>            
