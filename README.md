@@ -52,4 +52,3 @@ Este repositorio contiene el desarrollo de maquetacion del reto **(Frelancer)** 
 ## PRODUCTO FINAL
 El reto consiste en replicar el sitio de Freelancer, este será el resultado a lograr:
 
-![AppLove](https://fotos.subefotos.com/1edc0aab51f1d624da4a24ab86129d87o.png) 
