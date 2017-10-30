@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Freelancer</title>
     <link rel="stylesheet" href="css/main.css"> <!--Enlazamos nuestro archivo externo css-->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet"> <!--Enlazamos las 2 fuentes de google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700" rel="stylesheet"> <!--Enlazamos las 2 fuentes de google fonts-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
@@ -22,20 +22,24 @@
     </header>
 
     <section id="intro">
-        <di class="container">
-            <figure>
-                <img src="assets/images/profile.png">
-            </figure>
-            <h1>START BOOTSTRAP</h1>
-            <hr class="fa fa-star fa-2x"> <!--Insertamos icono start-->       
-            <p>Web Developer - Graphic Artist - User Experience Designer</p>
+        <di class="container">    
+            <img src="assets/images/profile.png">
+            <div class="intro-text">
+                <h1>START bootstrap</h1>
+                <div class="star-white">
+                    <i class="fa fa-star fa-2x"></i><!--Insertamos icono start-->       
+                </div>
+                <p>Web Developer - Graphic Artist - User Experience Designer</p>
+            </div>
         </div>
     </section>
 
     <section id="portfolio">
         <div class="container">
             <h2>PORTFOLIO</h2>
-            <hr class="fa fa-star fa-2x"> <!--Collocamos el icono start-->
+            <div class="star-black">
+                <i class="fa fa-star fa-2x"></i><!--Insertamos icono start-->       
+            </div>
             <div class="figure">
                 <div class="box">
                     <img src="assets/images/portfolio/cabin.png" alt="">
@@ -56,114 +60,93 @@
                     <img class="" src="assets/images/portfolio/submarine.png" alt="">
                 </div>
             </div>
-        </div>
-
-            
+        </div>     
     </section>
 
     <section id="about">
         <div class="container">
             <h2>ABOUT</h2>
-            <div class="star">
-                <hr class="fa fa-star fa-2x">
+            <div class="star-white">
+                <i class="fa fa-star fa-2x"></i><!--Insertamos icono start-->       
             </div>
             <div class="row"> <!--Dividimos en 2 columnas-->
-                <div class="col-lg-4">
+                <div class="colum">
                     <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="colum">
                     <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
                 </div>
             </div>
-                <div class="col-lg-8">
-                    <a href="#" class="btn btn-lg btn-outline">
-                    <i class="fa fa-download"></i> <!--Agregamos icono download-->
-                    Download Theme
-                    </a>
-                </div>
-            
+            <div class="download">
+                <a href="#" class="btn btn-lg btn-outline">
+                <i class="fa fa-download"></i> <!--Agregamos icono download-->
+                Download Theme
+                </a>
+            </div>
         </div> 
     </section>
     
     <section id="contact">
         <div class="container"> <!--Esta caja contendra todo el contenido-->
             <h2>CONTACT ME</h2>
-            <hr class="fa fa-star fa-2x"> <!--Linea horizontal/estrella/linea-->
+            <div class="star-black">
+                <i class="fa fa-star fa-2x"></i><!--Insertamos icono start-->       
+            </div>
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <form name="sentMessage" id="" novalidate> <!--Creamos formulario-->
-                        <div class="control-group">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input class="form-control" id="name" type="text" placeholder="Name"> <!--Validamos (required data-validation-required-message="Please enter your name.")-->
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input class="form-control" id="email" type="email" placeholder="Email Address">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input class="form-control" id="phone" type="tel" placeholder="Phone Number">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <div class="form-group">
-                                <label>Message</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-lg" id="sendMessageButton">Send</button>
-                        </div>
-                    </form>
+                <form name="sentMessage" id="" novalidate> <!--Creamos formulario-->
+                    <input class="form-control" id="name" type="text" placeholder="Name"> <!--Validamos (required data-validation-required-message="Please enter your name.")-->
+                    <input class="form-control" id="email" type="email" placeholder="Email Address">
+                    <input class="form-control" id="phone" type="tel" placeholder="Phone Number">
+                    <textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
+                    <div class="submit-button">
+                        <button type="submit" class="btn-submit" id="sendMessageButton">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--ESTRUCTURE FOR THE FOOTER-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="colum-foot">
+                    <h3>LOCATION</h3>
+                    <P>3481 Melrose Place
+                    <br>
+                    Beverly Hills, CA 90210
+                    </P>
+                </div>
+                <div class="colum-foot">
+                    <h3>AROUND THE WEB</h3>
+                    <!--ICONS FOR THE SOCIAL NETWORKS -->
+                    <div class="redes">
+                        <ul>
+                            <li><a class="btn-social" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="btn-social" href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a class="btn-social" href="#"><i class="fa fa-twitter"class="fa fa-twitter"></i></a></li>
+                            <li><a class="btn-social" href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a class="btn-social" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="colum-foot">
+                    <h3>ABOUT FREELANCER</h3>
+                    <P>
+                    Freelance is a free to use, open source
+                    <br>
+                    Bootstrap theme created by <strong>Start Bootstrap</strong>.
+                    </P>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="copyright">
+                    Copyright &#169; Pamela DLozano 2017
                 </div>
             </div>
         </div>    
-    </section>
-    <footer id="footer">
-        <div class="contact">
-        <div class="location">
-            <h3>LOCATION</h3>
-            <P>"3481 Melrose Place
-                "
-            <br>
-                "Beverly Hills, CA 90210"
-            </P>
-        </div>
-        <div class="around">
-            <h3>AROUND THE WEB</h3>
-            <ul>
-                <li class="fa fa-facebook"><a href=""></a></li>
-                <li class="fa fa-google-plus"><a href=""></a></li>
-                <li class="fa fa-twitter"><a href=""></a></li>
-                <li class="fa fa-linkedin"><a href=""></a></li>
-                <li class="fa fa-dribbble"><a href=""></a></li>
-            </ul>
-        </div>
-        <div class="freelancer">
-            <h3>ABOUT FREELANCER</h3>
-            <P>
-               "Freelance is a free to use, open source
-                "
-            <br>
-                "Bootstrap theme created by <strong>Start Bootstrap</strong>."
-            </P>
-        </div>
-        <div class="firma">
-            <p>Copyright &#169; Pamela DLozano 2017</p>
-        </div>
-        </div>            
     </footer>
-    
 </body>
 </html>

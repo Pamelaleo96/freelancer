@@ -1,3 +1,4 @@
+/* CLASES REUTILIZABLES */
 * {
     /*#2c3e50, #18bc9c, #212529*/
     -webkit-box-sizing: border-box;
@@ -8,218 +9,220 @@
 }
 
 .container { /*Contenedor: ocupe cada fila del navegador(para cada imagen de work)*/
-    outline: 1px solid yellow;
+    max-width: 1140px;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.text-uppercase {
-    text-transform: uppercase;/*Convierte el texto a mayuscula*/
+a {
+    color: white;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #18bc9c;
+    cursor: pointer;
 }
 
-/*STYLE FOR THE HEADER*/
+a:active {
+    color: #fff;
+    background: #18bc9c;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+h1, h2, h3 {
+    font-family: "Montserrat",'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; /*Convierte el texto a mayuscula*/
+}
+
+section {
+    padding: 100px 0;
+}
+
+section h2 {
+    font-size: 3em;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+/*Estilo para lineas entes y despues de la estrella*/
+.star-white::before { /*linea antes de estrella blanca*/
+    content: "";
+    width: 110px;
+    height: 5px;
+    background-color: white;
+    display: inline-block;
+}
+
+.star-white::after { /*linea despues de estrella blanca*/
+    content: "";
+    width: 110px;
+    height: 5px;
+    background-color: white;
+    display: inline-block;
+}
+
+.star-black::before { /*linea antes de estrella*/
+    content: "";
+    width: 110px;
+    height: 5px;
+    background-color: #2c3e50;
+    display: inline-block;
+}
+
+.star-black::after { /*linea antes de estrella*/
+    content: "";
+    width: 110px;
+    height: 5px;
+    background-color: #2c3e50;
+    display: inline-block;
+}
+
+.fa-star { /*Tamaño de la estrella*/
+    position: relative;
+    top: 10px;
+    text-align: center;
+    margin: 15px 8px 30px 8px;
+}
+
+
+/*--STYLE FOR THE HEADER--*/
 header {
-    outline: 1px solid rosybrown;
+    font-family: "Montserrat",'Helvetica Neue',Helvetica,Arial,sans-serif;  
+    background-color: #2c3e50; 
     position: fixed;
-    font-family: "Montserrat";   
-    background-color: #2c3e50;    
     top: 0; /*Se peque la parte duperior del navegador*/
     width: 100%; /*Tomara todo el navegador*/
     height: 108px; /*Alto de header*/
-    font-weight: bolder;
-    z-index: 1000; /* 6 z-index-> sirve para trabajar por capas (traer adelante on retroceder capas antes o delante de otro)*/
+    font-weight: bolder; /*El navegador tendra letras gruesas*/
+    z-index: 1000; /* 6 z-index-> sirve para trabajar por capas (traer adelante on retroceder capas antes o delante de otro)*/ 
 }
 
 span {
-    outline: 1px solid yellow;
     position: absolute;/*centra el span del header*/
     color: white;
     font-size: 2em;
     transform: translateY(-50%);/*debajo de su padre*/
     top: 50%; /*siempre va junto a transalate para afectar a su padre*/
-    margin-left: 12%;
+    cursor: pointer;
 }
 
-/*Style for navegator*/
+/*navegator*/
 nav {
-    outline: 1px solid orange;
     position: absolute;/*cenytra el navegador del header*/
     float: right;
-    right: 7%;
+    right: 237px;
+    color: white; 
     transform: translateY(-50%);/*debajo de su padre*/
     top:50%; /*siempre va junto a transalate para afectar a su padre*/
+    cursor: pointer;
 }
 
 nav a {
-    outline: 1px solid red;
-    text-decoration: none; /*Quitamos el color azul del enlace*/
-    font-size: 16px;    
-    color: white;    
-    margin-left: 18px;
-    cursor: pointer;
+    text-decoration: none; /*Quitamos el color azul del enlace*/  
+    font-size: 1rem;    
+    padding: 8px;
+    letter-spacing: 1px; /*espacios entre letras del navegador*/
 }
 
 /*STYLE FOR THE INTRO*/
 #intro {
-    outline: 1px solid red;
     text-align: center;
-    margin-top: 108px;
     background-color: #18bc9c;
-    font-weight: bold;
     color: white;
-    height: 685px;
     width: 100%; /*Ocupe todo el navegador*/
+    padding-top: 200px;
+    padding-bottom: 100px;
 }
 
-#intro div {
-    outline: 1px solid yellow;
-    margin-top: 102px;
-    margin-bottom: 10px;
+#intro img {
+   display: block;
+   margin: 0 auto 20px;
 }
 
-#intro figure img {
-    margin-top: 92px;/*bien*/
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 #intro h1 {
-    outline: 1px solid white;
-    font-family: "Montserrat";
-    font-size: 4.7em;
-    margin-top: 16px;
-    margin-bottom: 15px;
+    font-size: 4.75em;  
 }
-
-#intro hr {
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-/*.fa-sta::before {/*OBSERVAR*/
-   /* content: "";
-    width: 10%;
-    height: 5px;
-    background-color: white;
-    display: inline-block; /*Para que se muestre*/ /*con % se adaptan a cualquier dispositivo*/
-/*}*/
 
 #intro p {
-    outline: 1px solid blue;
     font-family: "Lato";
     font-size: 1.75em;
+    font-weight: 300;
 }
 
 /*STYLE FOR THE SECTION PORTFOLIO*/
 #portfolio {
     outline: 1px solid green;
+    width: 100%;
     text-align: center;
-    font-family: "Lato";
+    padding-top: 100px;
+    padding-bottom: 100px;
     font-weight: bold;
     color: #2c3e50;
-    width: 100%;
 }
 
 #portfolio h2 {
     outline: 1px solid yellow;
-    font-size: 3em;
-    margin-top: 90px;
-    margin-bottom: 15px;
+    margin: 0;
 }
-
-#portfolio hr {
-    outline: 1px solid red;
-    margin-bottom: 20px;
-}
-
 #portfolio .figure {
     outline: 1px solid blue;
-    margin-bottom: 132px;
+    
 }
-
 #portfolio .box {
-    display: inline-block;/*Una imagen se coloque al costado de otro*/
-}
-
-#portfolio img {
-    outline: 2px solid greenyellow;
-    width: 350px;
-    height: 253px;
-    margin: 15px; /*margen para cada imagen*/
+    outline: 1px solid red;
+    display: inline-block;
+    width: 345px;
+    height: 249px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 0 30px;
 }
 
 /*STYLE FOR THE SECTION ABOUT*/
 #about {
-    outline: 1px solid red;
     text-align: center;
     background-color: #18bc9c;
     color: white;
-    height: 685px;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     width: 100%;
 }
 
-#about h2 {
-    outline: 1px solid yellow;
-    font-size: 3em;
-    padding-top: 100px;
-    margin-bottom: 15px;
-    font-family: "Montserrat"; 
-    font-weight: bold; 
-}
-
-#about hr {
-    outline: 1px solid green;
-  
-}
-
-div .star::after { /*despues del titulo mostrar una rayita*/
-    outline: 1px solid orange;
-   /* content: "";
-    width: 30%;
-    height: 5px;
-    background-color: black;
-    display: block; /*Para que se muestre*/ /*con % se adaptan a cualquier dispositivo*/
-}
-
 #about .row { /*Colocamos en 2 columnas*/
-    outline: 1px solid red;
     column-count: 2;
-    display: inline-block;
-    width: 50%; /*ancho*/
+    margin: 0px 190px 20px 190px;
 }
 
-#about .col-lg-4 {
-    outline: 1px solid yellowgreen;
-    font-size: 20px;
-    font-family: "Lato";
+#about .colum {
+    font-family: "Lato",'Helvetica Neue',Helvetica,Arial,sans-serif;
     text-align: left;
-    margin-top: 10px;
-    margin: 0px;    
 }
 
-p {
-    outline: 1px solid blue;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
+#about p {
+    font-size: 20px; 
 }
 
-
+#about .download {
+    font-family: "Lato",'Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin-top: 50px;
+}
 
 #about .btn {
-    outline: 1px solid teal;
-    margin-top: 10px;
-    display: inline-block;
+    font-size: 20px; 
     font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    
+    border: solid 2px #fff;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
 }
 
 #about a {
@@ -227,130 +230,71 @@ p {
     cursor: pointer;
 }
 
-.btn-outline {
-        font-size: 20px;
-        margin-top: 15px;
-        transition: all .3s ease-in-out;
-        color: #fff;
-        border: solid 2px #fff;
-        background: 0 0;
-}
-
 /*STYLE FOR THE SECTION CONTACT*/
-
 #contact {
     outline: 1px solid green;
     width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
     background-color: white;
     color: #2c3e50;
-    height: 685px;
-    padding: 100px 0; /*Alinea con la anterior seccion*/
+    justify-content:center;
 }
 
 #contact h2 {
-    outline: 1px solid yellow;
-    margin-bottom: 15px;
-    font-weight: bold;
     font-family: "Montserrat";
-    font-size: 48px;
 }
 
-#contact hr {
-
-}
-
-#contact .row {
-    
-
-}
-
-form {
-    outline: 1px solid green;
-    display: block;
-    margin-top: 0em;
-    text-align: left;
-    width: 700px;
-}
-
-.form-group {
-    font-size: 1.5em;
-    position: relative;
-    z-index: 1;
-    padding-right: 0;
-    padding-left: 0;
-    resize: none;
+.form-control {
+    padding: .5rem;
+    margin: .5rem 0;
     border: none;
-    border-radius: 0;
-    background: 0 0;
-    box-shadow: none!important;
-   
+    border-bottom: 1px solid #ddd;
+    transition: all .5s;
+    width: 700px;
+    height: 100px;
+    font-size: 25px;
 }
 
-.form-control  {
-    display: block;
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-image: none;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+input textarea {
+    font-family: "Lato";
+    height: 160px;
 }
 
-input, textarea, select, button, meter, progress {
-    -webkit-writing-mode: horizontal-tb;
+/*boton submit del formulario*/
+.btn-submit {
+   border-bottom: none;
+   background-color: #18bc9c ;
+   color: white;
+   padding: .5rem 1rem;
+   font-size: 1.25rem;
+   line-height: 1.5;
+   border-radius: .3rem;
+   margin-right: 650px;
 }
-
-input, textarea, select, button {
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    margin: 0em;
-    font: 13.3333px Arial;
-}
-.btn-success {
-font-weight: 700;
-color: #fff;
-border-color: #18bc9c;
-background-color: #18bc9c;
-}
-
-
-
-
-
 
 /*STYLE FOR THE FOOTER */
-
 #footer {
-    outline: 1px solid yellow;
     text-align: center;
     background-color: #2c3e50;
-    height: 400px;
     color: white;
     width: 100%;
+    padding-top: 50px; /*separa row con el navegador*/
 }
 
-#footer .contact {
-    margin-top: 54px;
-    display: inline-block;    
+#footer .colum-foot {
+    float: left;
+    width: 350px;
+    height: 169px; 
+    margin-bottom: 50px;
+    margin-left:  15px;
 }
 
 h3 {
-    outline: 1px solid orange;
     font-family: "Montserrat";
     font-size: 28px;  
+    margin-bottom: 30px;
 }
 
 p {
@@ -358,24 +302,27 @@ p {
     font-size: 20px;
 }
 
-.location {
-    outline: 1px solid white;
-    right: 20px;
+p strong {
+    color: #18bc9c;
 }
 
-
-.around {
-    outline: 1px solid white;
+.redes li { /*contenedor de iconos de las redes sociales*/
+   margin-top: 15px;
+   font-size: 20px;
+   line-height: 45px;
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   border: 2px solid #fff;
+   border-radius: 100%;
 }
 
-.freelancer {
-    outline: 1px solid white;
-    margin-bottom: 10px;
-}
-
-.firma {
-    outline: 1px solid white;
-    margin-top: 15px;
+.copyright {
+    font-family: "Lato";
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom:  25px;
 }
 
 
