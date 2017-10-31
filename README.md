@@ -3,7 +3,6 @@
 Este repositorio contiene el desarrollo de maquetacion del reto **(Frelancer)** poniendo en práctica lo aprendido en clases y el self learnig estructuras HTML y hoja de estilo CSS.
 
 ## Consideraciones generales
-
 - La pagina a maquetear es: [sitio original](https://blackrockdigital.github.io/startbootstrap-freelancer/).
 - Utilizaremos 2 tipografías: `Montserrat` y `Lato`.
 - La paleta de colores son los siguientes: `#2c3e50`, `#18bc9c`, `#212529`.
@@ -42,13 +41,17 @@ Este repositorio contiene el desarrollo de maquetacion del reto **(Frelancer)** 
     * font-weight
     * text-align
 
-4. Aplicaremos uso de fuentes **Tipografia**
+4. Aplicaremos uso de fuentes **Tipografia e iconos**
     * Google fonts
+    * Fonts Awesome
+
+5. Aplicaremos uso de **Form e inputs**
 
 ### Herramientas Utilizadas:
 1. HTML5
 2. CSS3
 
 ## PRODUCTO FINAL
-El reto consiste en replicar el sitio de Freelancer, este será el resultado a lograr:
+El reto consiste en replicar el sitio de Freelancer:
 
+![frelancer](docs/fullpage.png) 
